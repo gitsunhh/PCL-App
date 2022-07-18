@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PCL_AppClass</class>
+ <widget class="QMainWindow" name="PCL_AppClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>699</width>
+    <height>539</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PCL_App</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QVTKWidget" name="qvtkWidget">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>-10</y>
+      <width>500</width>
+      <height>500</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>500</width>
+      <height>500</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>699</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionLoad"/>
+   </widget>
+   <widget class="QMenu" name="menuVisualize">
+    <property name="title">
+     <string>Visualize</string>
+    </property>
+    <widget class="QMenu" name="menuColor">
+     <property name="title">
+      <string>ColorMap</string>
+     </property>
+     <addaction name="actionSimple"/>
+     <addaction name="actionPlattete"/>
+    </widget>
+    <addaction name="menuColor"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menuVisualize"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionLoad">
+   <property name="text">
+    <string>Load</string>
+   </property>
+  </action>
+  <action name="actionSimple">
+   <property name="text">
+    <string>Simple</string>
+   </property>
+  </action>
+  <action name="actionPlattete">
+   <property name="text">
+    <string>Palette</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QVTKWidget</class>
+   <extends>QWidget</extends>
+   <header>QVTKWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="PCL_App.qrc"/>
+ </resources>
+ <connections/>
+</ui>
